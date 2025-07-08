@@ -20,41 +20,43 @@ _在瀏覽您的儲存庫時的實用技巧。_
 </header>
 
 <!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
+  <<< Author notes: Step 2 >>>
+  Start this step by acknowledging the previous step.
+  Define terms and link to docs.github.com.
 -->
 <!--
-  <<< 作者註記：步驟 1 >>>
-  為您的課程選擇 3-5 個步驟。
-  第一步總是最難的，所以選一些簡單的內容吧！
-  連結到 docs.github.com 以獲得更深入的解釋。
-  鼓勵使用者為每個步驟開啟新的分頁！
+  <<< 作者註記：步驟 2 >>>
+  從感謝上一步的操作開始這個步驟。
+  定義專有名詞並連結到 docs.github.com。
 -->
 
-## 步驟 1：解決重複的議題
+## 步驟 2：在歷史紀錄中尋找一個提交 (commit)
 
-_歡迎來到這個課程 :tada:_
+_感謝您加上重複議題的註記 :wave:_
 
-GitHub 有一些特殊功能，可以幫助您參照 GitHub 上的其他資訊。舉例來說，當您用編號參照另一個議題 (issue) 或拉取請求 (pull request) 時，那個編號會自動變成超連結。同時，在被連結的議題或拉取請求中，也會建立一個相互參照 (cross-reference)。這種雙向的參照關係，能幫助大家在 GitHub 上追蹤資訊之間的關聯。
+版本控制的一個重要部分，就是能夠回顧過去。透過使用 `git blame`，並找出某個提交背後的故事，我們能做到的不只是「指責」某人寫了某段程式碼。我們更能看到一個提交之所以被建立的前因後果。它關聯的拉取請求是什麼？是誰核准了那個拉取請求？在它被合併之前，有哪些測試在這個提交上運行過？
 
-![一張螢幕截圖，顯示一個議題連結到一個 PR，以及一個 PR 中有著對該議題的相互參照](https://user-images.githubusercontent.com/6351798/172456846-2daec570-08b0-4ffa-a7cb-41acc50b836e.png)
+在歷史紀錄中尋找資訊最直接的理由，就是為了了解歷史。透過議題和拉取請求，我們能看到一個更完整的故事，而不僅僅是最低限度的資訊。
 
-當有多位團隊成員協作時，有時候議題可能會被重複建立。在上面的例子中，新的議題 `#8346` 是先前議題 `#8249` 的複本。相互參照的功能讓您可以追蹤這些重複的議題，並在適當的時候關閉它們。
+### `git blame` 是什麼？
 
-### 建立參照
+`git blame` 是 Git 的一個功能，它能顯示一個檔案中的每一行，最後是由哪個修訂版本 (revision) 和哪位作者所修改的。像是誰、在何時、甚至為何做了某個提交這樣的資訊，都可以透過這個功能找到。如果您不確定是誰對檔案做了某些變更，您就可以用 `git blame` 來查明。雖然 `git blame` 這個詞聽起來有點像在追究責任，但它其實常被用來理解決策背後的脈絡。
 
-當您連結到另一個議題時，GitHub 就會自動建立一個參照。事實上，您甚至不需要貼上完整的連結。只要您在留言中輸入 `#5`，它就會自動變成連到 5 號議題或拉取請求的連結。
+### 什麼是 SHA (安全雜湊演算法)？
 
-當您想建立一個相互連結時，只要輸入 `#` 符號，接著直接開始輸入議題或拉取請求的標題。GitHub 就會自動建議相關的議題或拉取請求，讓您能連結到正確的地方。想了解更多的話，可以參考 [自動連結的參照與 URL](https://docs.github.com/en/articles/autolinked-references-and-urls) 這篇文章。
+SHA (Secure Hash Algorithm) 是一個指向特定物件的參照。在我們這裡的例子中，它指向一個提交 (commit)。在 GitHub 上，您可以查看一個特定的提交，來了解它引入了哪些變更、由誰提交，以及它是否是某個拉取請求的一部分。
 
-### :keyboard: 動手做：找出並關閉相互連結的議題
+### :keyboard: 動手做：在歷史紀錄中尋找提交
 
-1. 前往議題 **#1 (Welcome)**。
-2. 在留言中輸入 `Duplicate of #2`，然後關閉議題 #1。
-3. 等待約 20 秒，然後重新整理這個頁面（也就是您正在閱讀說明的這個頁面）。[GitHub Actions](https://docs.github.com/en/actions) 將會自動將課程更新到下一個步驟。
+1.  前往您的儲存庫的 **Code** (程式碼) 索引標籤。
+    -   *小提示：您先前可能已經在新分頁中建立了您的儲存庫。*
+2.  點擊 `docs` 進入 `/docs` 目錄。
+3.  點擊 `_sidebar.md` 來檢視這個檔案。
+4.  在檔案檢視頁面的頂端，點擊 **Blame** 按鈕，來查看最新修訂版本的詳細資訊。
+5.  點擊提交訊息 `add sidebar to documentation`，來查看該提交的詳細內容。
+6.  複製 **SHA** 的前七個字元 (也就是在 `commit` 後面那串 40 個字元的十六進位字串中的前 7 個字元)。
+7.  前往議題 #2，將您在步驟 6 複製的 SHA 作為留言內容貼上，然後點擊「Comment」按鈕。
+8.  等待約 20 秒，然後重新整理這個頁面（也就是您正在閱讀說明的這個頁面）。[GitHub Actions](https://docs.github.com/en/actions) 將會自動將課程更新到下一個步驟。
 
 <footer>
 
