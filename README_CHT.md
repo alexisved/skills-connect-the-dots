@@ -20,49 +20,40 @@ _在瀏覽您的儲存庫時的實用技巧。_
 </header>
 
 <!--
-  <<< Author notes: Step 3 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
+  <<< Author notes: Finish >>>
+  Review what we learned, ask for feedback, provide next steps.
 -->
 <!--
-  <<< 作者註記：步驟 3 >>>
-  從感謝上一步的操作開始這個步驟。
-  定義專有名詞並連結到 docs.github.com。
+  <<< 作者註記：完成 >>>
+  回顧我們學到的內容，徵求回饋，並提供後續步驟。
 -->
 
-## 步驟 3：修復損壞的側邊欄
+## 完成
 
-_做得好，成功找到了那個提交 :heart:_
+_恭喜您，朋友，您已經完成了這門課程！ :tada:_
 
-感謝您找到那個提交！我們現在知道側邊欄確實是在那個提交中被加入的。讓我們再深入挖掘一下，看看是否有任何圍繞這個變更的規劃或對話，例如透過留言進行的討論。
+<img src="https://octodex.github.com/images/collabocats.jpg" alt=慶祝 width=300 align=right>
 
-如同我們已經看到的，議題和拉取請求中的對話可以參照其他工作，但它們所提供的上下文遠遠不止於相互連結。別忘了，Git 本身就是版本控制！舉例來說，您在上一步找到的那個提交，其實還連結了更多資訊，例如：
+在這門課程中，您學到了許多關於尋找和分享資訊的技巧。在 GitHub 儲存庫中，您不僅可以找到關於變更內容的歷史紀錄，更重要的是，還能了解這些變更是*為何*而做。
 
--   誰建立了這個提交。
--   還包含了哪些其他的變更。
--   這個提交是在何時建立的。
--   這個提交是哪個拉取請求的一部分。
+### 接下來呢？
 
-拉取請求之所以重要，是因為它不僅讓我們知道一個提交是*何時*發生的，更讓我們了解*為何*要這麼做。追溯歷史並不是為了*指責*任何人，而是為了看到更完整的全貌。為什麼會做出這些決定？誰參與其中？每個提交的建置結果和測試報告是什麼？誰要求變更，又是誰核准了它們？
+您可以啟用 GitHub Pages，將 `docs/index.html` 當作一個網站來瀏覽！
 
-### 從提交中找到拉取請求
+1.  在 `docs/index.html` 檔案中，將 `USERNAME` 替換成您的 GitHub 使用者名稱，並將 `REPONAME` 替換成您的 GitHub 儲存庫名稱。
+2.  在您的儲存庫名稱下方，點擊右上角的 :gear: **Settings** (設定)。
+3.  接著在左下角，點擊 **Pages** (頁面)。
+4.  在 **GitHub Pages** 區塊中，於 **Select branch** (選擇分支) 下拉選單中選擇 `main`，並在 **Select folder** (選擇資料夾) 下拉選單中選擇 `/docs`。
+5.  點擊 **Save** (儲存) 按鈕。
+6.  等待約 30 秒，然後重新整理頁面。當您看到「Your site is published at...」(您的網站已發佈於...) 的訊息時，就可以點擊連結來查看您發佈的網站了。
 
-當您在 GitHub 上查看一個提交時，您可以看到許多資訊。在這個檢視畫面中，您也能找到建立該提交的拉取請求連結。我們將在下一步用到這個功能。
+歡迎查看這些資源，以學習更多或參與社群：
 
-![一張在 GitHub 上查看提交的螢幕截圖，其中突顯了連向拉取請求的連結](https://user-images.githubusercontent.com/16547949/67341250-3edbb480-f4fd-11e9-805a-6bce5a8ba2d1.png)
-
-### :keyboard: 動手做：修復損壞的側邊欄
-
-1.  在 `main` 分支中，[編輯 `docs/_sidebar.md` 檔案](/docs/_sidebar.md)。
-2.  將第 4 行的參照 `(doc-references__.md)` 中的拼寫錯誤更正為 `(doc-references.md)`。
-3.  為這次的提交選擇或建立一個名為 `fix-sidebar` 的新分支，並發起一個拉取請求。
-4.  確認 **base:** 選擇的是 **main**，而 **compare:** 選擇的是 **fix-sidebar**。
-5.  在右側的 **Assignees** (指派對象) 區塊，將您自己指派給這個拉取請求。
-6.  在拉取請求的留言中加入 `Closes #2`，來自動連結議題 #2。
-7.  點擊 **Create pull request** (建立拉取請求)，並等待約 20 秒。
-8.  合併這個拉取請求。
-9.  刪除 `fix-sidebar` 分支。
-10. 等待約 20 秒，然後重新整理這個頁面（也就是您正在閱讀說明的這個頁面）。[GitHub Actions](https://docs.github.com/en/actions) 將會自動將課程更新到下一個步驟。
+-   您是學生嗎？快來看看 [學生開發者工具包](https://education.github.com/pack)。
+-   我們很樂意在我們的[論壇](https://github.com/orgs/skills/discussions/categories/connect-the-dots)中聽聽您對本課程的想法。
+-   [參加另一門 GitHub Skills 課程](https://github.com/skills)。
+-   [閱讀 GitHub 入門文件](https://docs.github.com/en/get-started)。
+-   想找專案來貢獻嗎？快到 [GitHub Explore](https://github.com/explore) 看看。
 
 <footer>
 
